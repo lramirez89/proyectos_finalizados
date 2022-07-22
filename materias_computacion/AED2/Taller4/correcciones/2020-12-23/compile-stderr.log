@@ -1,0 +1,63 @@
+In file included from ../../../../../../taller4/string_map_tests.cpp:2:0:
+./string_map.hpp: In instantiation of ‘string_map<T>::string_map() [with T = int]’:
+../../../../../../taller4/string_map_tests.cpp:5:21:   required from here
+./string_map.h:94:9: warning: ‘string_map<int>::_size’ will be initialized after [-Wreorder]
+     int _size;
+         ^~~~~
+./string_map.h:93:11: warning:   ‘string_map<int>::Nodo* string_map<int>::raiz’ [-Wreorder]
+     Nodo* raiz;
+           ^~~~
+In file included from ./string_map.h:97:0,
+                 from ../../../../../../taller4/string_map_tests.cpp:2:
+./string_map.hpp:5:1: warning:   when initialized here [-Wreorder]
+ string_map<T>::string_map() : _size(0), raiz(nullptr){}
+ ^~~~~~~~~~~~~
+In file included from ./string_map.h:97:0,
+                 from ../../../../../../taller4/string_map_tests.cpp:2:
+./string_map.hpp: In instantiation of ‘int string_map<T>::count(const string&) const [with T = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+../../../../../../taller4/string_map_tests.cpp:8:5:   required from here
+./string_map.hpp:68:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i<clave.size(); i++){
+                    ~^~~~~~~~~~~~~
+./string_map.hpp: In instantiation of ‘void string_map<T>::insert(const std::pair<std::__cxx11::basic_string<char>, T>&) [with T = int]’:
+../../../../../../taller4/string_map_tests.cpp:13:42:   required from here
+./string_map.hpp:45:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i<par.first.size(); i++){
+./string_map.hpp: In instantiation of ‘T& string_map<T>::at(const string&) [with T = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+../../../../../../taller4/string_map_tests.cpp:15:5:   required from here
+./string_map.hpp:95:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i<clave.size(); i++){
+                    ~^~~~~~~~~~~~~
+In file included from ../../../../../../taller4/string_map_tests.cpp:2:0:
+./string_map.hpp: In instantiation of ‘string_map<T>::string_map() [with T = string_map<int>]’:
+../../../../../../taller4/string_map_tests.cpp:141:33:   required from here
+./string_map.h:94:9: warning: ‘string_map<string_map<int> >::_size’ will be initialized after [-Wreorder]
+     int _size;
+         ^~~~~
+./string_map.h:93:11: warning:   ‘string_map<string_map<int> >::Nodo* string_map<string_map<int> >::raiz’ [-Wreorder]
+     Nodo* raiz;
+           ^~~~
+In file included from ./string_map.h:97:0,
+                 from ../../../../../../taller4/string_map_tests.cpp:2:
+./string_map.hpp:5:1: warning:   when initialized here [-Wreorder]
+ string_map<T>::string_map() : _size(0), raiz(nullptr){}
+ ^~~~~~~~~~~~~
+In file included from ./string_map.h:97:0,
+                 from ../../../../../../taller4/string_map_tests.cpp:2:
+./string_map.hpp: In instantiation of ‘void string_map<T>::insert(const std::pair<std::__cxx11::basic_string<char>, T>&) [with T = string_map<int>]’:
+../../../../../../taller4/string_map_tests.cpp:153:48:   required from here
+./string_map.hpp:45:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i<par.first.size(); i++){
+./string_map.hpp: In instantiation of ‘T& string_map<T>::at(const string&) [with T = string_map<int>; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+../../../../../../taller4/string_map_tests.cpp:158:2:   required from here
+./string_map.hpp:95:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i<clave.size(); i++){
+                    ~^~~~~~~~~~~~~
+./string_map.hpp: In instantiation of ‘void string_map<T>::erase(const string&) [with T = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+../../../../../../taller4/string_map_tests.cpp:178:27:   required from here
+./string_map.hpp:111:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < clave.size(); i++) {
+                         ~~^~~~~~~~~~~~~~
+./string_map.hpp:129:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             while (pos < clave.size()) {
+                    ~~~~^~~~~~~~~~~~~~

@@ -42,18 +42,18 @@ public enum Moneda {
             return 0.6;
         if(mon1 == Peso && mon2 == Won_Coreano)
             return 0.4;
+        if(mon1 == Dolar && mon2 == Peso)
+            return 286;
         else
             return 0;
     }
 
     /**
-     * Devuelve la cantidad en la moneda mon2 que se obtiene de vender cantidad mon1
+     * Devuelve la cantidad en la moneda mon que se obtiene de vender cantidad instanciada 
      * @param cantidad
-     * @param mon1
-     * @param mon2
-     * @return
+     * @param mon
      */
-    public double vender(double cantidad, Moneda mon1, Moneda mon2){
-        return Moneda.cotizacionVenta(mon1, mon2)*cantidad;
+    public double vender(double cantidad, Moneda mon){
+        return Moneda.cotizacionVenta(this, mon)*cantidad;
     }
 }

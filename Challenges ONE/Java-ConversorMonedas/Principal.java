@@ -19,21 +19,24 @@ public class Principal{
     
                 //mostramos opciones para convertir de monAVender
                 Moneda monAComprar = (Moneda) JOptionPane.showInputDialog(null, "Seleccione una moneda", "Convirtiendo de " + monAVender + " a:", 1, null, Moneda.values(), null);
+                try{
+                    Double cantidad =  Double.valueOf(JOptionPane.showInputDialog("Ingrese la cantidad de dinero que deseas convertir:")) ;
+
+                    Double cantComprada = monAVender.vender( cantidad, monAComprar);
+                    String mensaje = "Tienes $ " + cantComprada + " "+ monAComprar +"s";
+                    JOptionPane.showMessageDialog(null, mensaje, "Mensaje", 0, null);
     
-                String cantidad = JOptionPane.showInputDialog("Ingrese la cantidad de dinero que deseas convertir:");
-    
-                System.out.println("la cantidad:" + cantidad);
-                
-                Double cantComprada = monAVender.vender( Double.valueOf(cantidad), monAComprar);
-                String mensaje = "Tienes $ " + cantComprada + " "+ monAComprar +"s";
-                JOptionPane.showMessageDialog(null, mensaje, "Mensaje", 0, null);
-    
-                //muestro dialogo de confirmación
-                deseaContinuar  = JOptionPane.showConfirmDialog(null, "Desea continuar?");
+                    //muestro dialogo de confirmación
+                    deseaContinuar  = JOptionPane.showConfirmDialog(null, "Desea continuar?");
+
+                    if(deseaContinuar == 1)
+                        JOptionPane.showMessageDialog(null, "Programa terminado", "Mensaje", 0, null);
+                }catch(NumberFormatException ex){
+                    JOptionPane.showMessageDialog(null, "Debe ingresar un munero decimal. Use , en lugar de .", "Mensaje", 0, null);                    
+                }   
         
             }else{
-                String[] opConversion = {"De Pesos a Dolar", "De Pesos a Euro", "De Pesos a Libras", "De Pesos a Yen", "De Pesos a Won Coreano", "De Dólar a Pesos", "De Euro a Pesos", "De Libras a Pesos"};
-                Object opcionMonedas = JOptionPane.showInputDialog(null, "Elija la moneda a la que deseas convertir tu dinero", "Conversor", 1, null, opConversion , null);
+                JOptionPane.showMessageDialog(null, "Conversor todavía no implementado", "Mensaje", 0, null);
             }
         }
     } 

@@ -1,3 +1,6 @@
+/**
+ * Implentación de las monedas a convertir
+ */
 public enum Moneda {
     Peso, Dolar, Euro, Libra, Yen, Won_Coreano;
 
@@ -26,7 +29,7 @@ public enum Moneda {
      * @param mon2
      * @return
      */
-    public static double cotizacionVenta(Moneda mon1, Moneda mon2){
+    private static double cotizacionVenta(Moneda mon1, Moneda mon2){
         if(mon1 == Peso && mon2 == Peso)
             return 0;
         if(mon1 == Peso && mon2 == Dolar)
@@ -41,5 +44,16 @@ public enum Moneda {
             return 0.4;
         else
             return 0;
+    }
+
+    /**
+     * Devuelve la cantidad en la moneda mon2 que se obtiene de vender cantidad mon1
+     * @param cantidad
+     * @param mon1
+     * @param mon2
+     * @return
+     */
+    public double vender(double cantidad, Moneda mon1, Moneda mon2){
+        return Moneda.cotizacionVenta(mon1, mon2)*cantidad;
     }
 }

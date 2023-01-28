@@ -29,7 +29,7 @@ public class Principal{
                     //muestro dialogo de confirmación
                     deseaContinuar  = JOptionPane.showConfirmDialog(null, "Desea continuar?");
 
-                    if(deseaContinuar == 1)
+                    if(deseaContinuar >= 1)
                         JOptionPane.showMessageDialog(null, "Programa terminado", "Mensaje", 0, null);
                 }catch(NumberFormatException ex){
                     JOptionPane.showMessageDialog(null, "Debe ingresar un munero decimal. Use , en lugar de .", "Mensaje", 0, null);                    

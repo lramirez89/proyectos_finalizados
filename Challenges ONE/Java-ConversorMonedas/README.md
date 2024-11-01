@@ -1,1 +1,0 @@
-Este proyecto es un conversor de monedas, implementado en el marco del primer challenge ONE (Oracle Next Education)

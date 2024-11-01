@@ -1,6 +1,0 @@
-[==========] Running 10 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 10 tests from string_map_test
-[ RUN      ] string_map_test.vacio
-[       OK ] string_map_test.vacio (0 ms)
-[ RUN      ] string_map_test.asignar
